@@ -350,6 +350,11 @@ nav .contacts .number {
   /* Слайд по центру */
 }
 
+.s2-new .s2btn {
+  margin-top: 1em;
+  text-align: center;
+}
+
 .s2-new .slick-list {
   overflow: hidden;
 }
@@ -425,6 +430,7 @@ nav .contacts .number {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 !important;
 }
 
 .s2-new .slider-s2 .slick-dots li {
