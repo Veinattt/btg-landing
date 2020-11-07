@@ -24,6 +24,71 @@ $(document).ready(function () {
         speed: 1000,
         variableWidth: true,
         draggable: false,
+        asNavFor: '.slider-nav',
+        waitForAnimate:false,
+        responsive: [{
+                breakpoint: 992,
+                settings: {
+                    arrows: false,
+                    draggable: true,
+                }
+            },
+        ],
+    });
+});
+$('.slider-nav').slick({
+    arrows: false,
+    
+    slidesToScroll: 1,
+    asNavFor: '.slider-team',
+    speed: 1000,
+    centerMode: true,
+    variableWidth: true,
+    draggable: false,
+    focusOnSelect: true,
+    waitForAnimate:false,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 5,
+        }
+    },
+],
+});
+// $('.slider-navs2').slick({
+//     arrows: false,
+    
+//     slidesToScroll: 1,
+//     asNavFor: '.slider-s2',
+//     speed: 1000,
+//     centerMode: true,
+//     variableWidth: true,
+//     draggable: false,
+//     focusOnSelect: true,
+//     waitForAnimate:false,
+//     responsive: [{
+//         breakpoint: 768,
+//         settings: {
+//             slidesToShow: 5,
+//         }
+//     },
+// ],
+// });
+
+$(document).ready(function () {
+    var slideIndex = 0;
+    newBlock(slideIndex);
+    $('.slider-s2').slick({
+        arrows: false,
+        // asNavFor: '.slider-navs2',
+        slidesToShow: 1,
+        touchMove: true,
+        variableWidth: true,
+        centerMode: true,
+        speed: 1000,
+        draggable: true,
+        dots: true,
+        
     });
 });
 
@@ -48,6 +113,26 @@ function display_p2(n) {
         form.style.transform = "translateX(0%)";
     }
 }
+
+function openSideNav() {
+    var a = document.getElementsByClassName('sideCont');
+    document.getElementById("mySidenav").style.width = "100%";
+    setTimeout(function () {
+      for (i = 0; i < a.length; i++) {
+        a[i].style["opacity"] = 1;
+      }
+    }, 400);
+  }
+  
+  function closeSideNav() {
+    var a = document.getElementsByClassName('sideCont');
+    for (i = 0; i < a.length; i++) {
+      a[i].style["opacity"] = 0;
+    }
+    setTimeout(function () {
+      document.getElementById("mySidenav").style.width = "0";
+    }, 300);
+  }
 
 document.addEventListener('click', function (e) {
     if (document.activeElement.toString() == '[object HTMLButtonElement]') {
