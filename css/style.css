@@ -342,6 +342,8 @@ nav .contacts .number {
 }
 
 .s2-new {
+  margin-top: 5em;
+  margin-bottom: 5em;
   display: none;
   /* Ограничивающая оболочка */
   /* Лента слайдов */
@@ -353,7 +355,6 @@ nav .contacts .number {
 .s2-new .s2btn {
   margin-top: 1em;
   text-align: center;
-  margin-bottom: 3em;
 }
 
 .s2-new .slick-list {
