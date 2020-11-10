@@ -893,7 +893,9 @@ nav .contacts .number {
 }
 
 .our-team .slider-team {
-  min-width: 0;
+  width: 1px;
+  min-width: 100%;
+  *width: 100%;
   position: relative;
   padding-left: 7em !important;
   padding-right: 7em !important;
