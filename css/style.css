@@ -872,7 +872,6 @@ nav .contacts .number {
   /* Лента слайдов */
   /* Слайд */
   /* Конкретный слайдер */
-  /* Слайд по центру */
 }
 
 .our-team .slick-list {
@@ -897,8 +896,42 @@ nav .contacts .number {
   min-width: 100%;
   *width: 100%;
   position: relative;
-  padding-left: 7em !important;
-  padding-right: 7em !important;
+}
+
+.our-team .slider-team .slick-arrow.slick-prev {
+  border: none;
+  left: 20.5%;
+  top: 20%;
+  z-index: 10;
+  background: url("../img/prev.svg") 0 0/100% no-repeat;
+}
+
+.our-team .slider-team .slick-arrow.slick-prev:hover {
+  background: url("../img/prevred.svg") 0 0/100% no-repeat;
+}
+
+.our-team .slider-team .slick-arrow {
+  position: absolute;
+  font-size: 0;
+  width: 75px;
+  height: 75px;
+  color: red;
+}
+
+.our-team .slider-team .slick-arrow:focus {
+  outline: none;
+}
+
+.our-team .slider-team .slick-arrow.slick-next {
+  right: 20.5%;
+  top: 20%;
+  z-index: 10;
+  border: none;
+  background: url("../img/next.svg") 0 0/100% no-repeat;
+}
+
+.our-team .slider-team .slick-arrow.slick-next:hover {
+  background: url("../img/nextred.svg") 0 0/100% no-repeat;
 }
 
 .our-team .slider-team .slider-item {
@@ -923,6 +956,13 @@ nav .contacts .number {
   margin-right: 0.7em;
   border-radius: 15px 50px 15px 50px;
   opacity: 0.3;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.our-team .slider-team .slider-item.slick-center {
+  opacity: 1;
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
   transition: opacity 1s;
@@ -1014,49 +1054,6 @@ nav .contacts .number {
   padding: 0.3em;
 }
 
-.our-team .slick-slide.slick-center {
-  opacity: 1;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-}
-
-.our-team .slider-team .slick-arrow {
-  position: absolute;
-  font-size: 0;
-  width: 75px;
-  height: 75px;
-  color: red;
-}
-
-.our-team .slider-team .slick-arrow:focus {
-  outline: none;
-}
-
-.our-team .slider-team .slick-arrow.slick-prev {
-  border: none;
-  left: 20.5%;
-  top: 20%;
-  z-index: 10;
-  background: url("../img/prev.svg") 0 0/100% no-repeat;
-}
-
-.our-team .slider-team .slick-arrow.slick-prev:hover {
-  background: url("../img/prevred.svg") 0 0/100% no-repeat;
-}
-
-.our-team .slider-team .slick-arrow.slick-next {
-  right: 20.5%;
-  top: 20%;
-  z-index: 10;
-  border: none;
-  background: url("../img/next.svg") 0 0/100% no-repeat;
-}
-
-.our-team .slider-team .slick-arrow.slick-next:hover {
-  background: url("../img/nextred.svg") 0 0/100% no-repeat;
-}
-
 .footer {
   height: 450px;
   display: -webkit-box;
@@ -1144,11 +1141,6 @@ nav .contacts .number {
 }
 
 @media (max-width: 1200px) {
-  .our-team .slider-team {
-    padding-left: 3em !important;
-    padding-right: 3em !important;
-  }
-
   .our-team .slider-team .slick-arrow.slick-prev {
     left: 15%;
   }
@@ -1213,9 +1205,8 @@ nav .contacts .number {
 }
 
 @media (max-width: 992px) {
-  .our-team .slider-team {
-    padding-left: 5em !important;
-    padding-right: 5em !important;
+  .our-team .slider-team .slider-item {
+    opacity: 1;
   }
 
   .our-team .slider-nav {
@@ -1368,14 +1359,16 @@ nav .contacts .number {
   }
 }
 
-@media (max-width: 540px) {
-  .s2-new {
-    display: block;
-  }
-
+@media (max-width: 550px) {
   .our-team .slider-team {
     padding-left: 3em !important;
     padding-right: 3em !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .s2-new {
+    display: block;
   }
 
   .our-team .slider-nav {
@@ -1498,12 +1491,14 @@ nav .contacts .number {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .our-team .slider-team {
-    padding-left: 1em !important;
-    padding-right: 1em !important;
+    padding-left: 0em !important;
+    padding-right: 0em !important;
   }
+}
 
+@media (max-width: 420px) {
   .our-team .slider-nav {
     padding-left: 5em !important;
     padding-right: 5em !important;
@@ -1511,6 +1506,10 @@ nav .contacts .number {
 }
 
 @media (max-width: 380px) {
+  .our-team .slider-team .slider-item-persone-name {
+    font-size: 18px;
+  }
+
   .our-team .slider-nav {
     padding-left: 4em !important;
     padding-right: 4em !important;
@@ -1550,9 +1549,8 @@ nav .contacts .number {
 }
 
 @media (max-width: 350px) {
-  .our-team .slider-team {
-    padding-left: 0em !important;
-    padding-right: 0em !important;
+  .our-team .slider-team .slider-item-t {
+    font-size: 16px;
   }
 
   .our-team .slider-nav {
